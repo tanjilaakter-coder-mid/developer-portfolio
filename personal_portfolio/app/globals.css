@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+body {
+  background: linear-gradient(135deg, #020617 0%, #1e3a8a 50%, #0f172a 100%);
+  color: #0f172a;
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode: Full Body, Navbar & All Sections Rich Dark Blue */
+.dark body {
+  background: linear-gradient(135deg, #020617 0%, #091338 50%, #030920 100%) !important;
+  color: #ffffff !important;
+}
+
+.dark header {
+  background-color: rgba(2, 4, 10, 0.85) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
+}
+
+.dark section {
+  background-color: transparent !important;
+}
+
+/* Specific Dark Blue Gradient for Hero & All Sections in Dark Mode */
+.dark #home,
+.dark #hero {
+  background: linear-gradient(135deg, #020617 0%, #091338 50%, #030920 100%) !important;
+}
+
+/* Force ALL cards across the entire portfolio to be Dark Blue with Glowing Light Shadow & White Text */
+.dark .backdrop-blur-xl,
+.dark .backdrop-blur-2xl,
+.dark .rounded-3xl,
+.dark .rounded-2xl,
+.dark [class*="rounded-"] {
+  background-color: rgba(6, 17, 46, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.25), inset 0 0 15px rgba(56, 189, 248, 0.1) !important;
+  color: #ffffff !important;
+}
+
+/* Force all text elements inside dark mode to be bright white */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark span, .dark a {
+  color: #ffffff !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
