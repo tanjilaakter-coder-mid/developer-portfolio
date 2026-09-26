@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const projectsList = [
@@ -10,7 +9,7 @@ const projectsList = [
     category: "Construction & Site Management",
     description: "Advanced site management and safety tools designed specifically for hardworking teams on the ground.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/images/buildpro.png",
+    image: "/images/buildpro.PNG",
     liveUrl: "#",
     githubUrl: "#"
   },
@@ -19,7 +18,7 @@ const projectsList = [
     category: "Agri-Tech & E-Commerce",
     description: "Direct marketplace connecting farmers and buyers seamlessly with home delivery and live crop listings.",
     tech: ["React", "Dashboard", "Tailwind"],
-    image: "/images/agridirect.png",
+    image: "/images/agridirect.PNG",
     liveUrl: "#",
     githubUrl: "#"
   },
@@ -28,7 +27,7 @@ const projectsList = [
     category: "AI Learning & Chat Platform",
     description: "Interactive AI-powered English learning assistant tracking queries, knowledge base, and student progress.",
     tech: ["Next.js", "AI Integration", "Tailwind"],
-    image: "/images/english-a2z.png",
+    image: "/images/english-a2z.PNG",
     liveUrl: "#",
     githubUrl: "#"
   }
@@ -107,7 +106,7 @@ export default function Projects() {
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-cyan-400/20 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-400/40 transition-all"></div>
 
               <div>
-                {/* Clean Browser Mockup Thumbnail (No Black Border) */}
+                {/* Clean Browser Mockup Thumbnail */}
                 <div className="w-full h-48 rounded-2xl bg-white dark:bg-gray-900 border border-blue-200/80 dark:border-white/15 mb-6 relative overflow-hidden shadow-sm flex flex-col">
                   
                   {/* Mockup Header Bar */}
@@ -117,13 +116,12 @@ export default function Projects() {
                     <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                   </div>
 
-                  {/* Image Container */}
-                  <div className="relative w-full flex-1">
-                    <Image 
+                  {/* Image Container using standard <img> tag */}
+                  <div className="relative w-full h-[calc(100%-1.5rem)] overflow-hidden">
+                    <img 
                       src={project.image} 
                       alt={project.title} 
-                      fill 
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" 
                     />
                   </div>
                 </div>
